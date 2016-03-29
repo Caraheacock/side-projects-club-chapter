@@ -21,7 +21,7 @@ jQuery('document').ready(function($){
         }
         
         if ($window.scrollTop() > threshold && !navIsSticky) {
-            $nav.removeClass('home-nav').removeClass('animate-nav');
+            $nav.removeClass('home-nav');
             navIsSticky = true;
         } else if ($window.scrollTop() <= threshold && navIsSticky) {
             $nav.addClass('home-nav');

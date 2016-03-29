@@ -2,5 +2,36 @@
 /* Header */
 /*--------*/
 
+.home #header {
+    height: 225px;
+    background-color: $light-gray;
+    
+    .header-content {
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(center);
+        height: 100%;
+        
+        .header-content-inner {
+            @include flex(0 1 33%);
+            width: 33%;
+            max-width: 250px;
+        }
+    }
+    
+    @include breakpoint($size-sm) {
+        height: 300px;
+    }
+    
+    @include breakpoint($size-md) {
+        height: 400px;
+    }
+    
+    @include breakpoint($size-lg) {
+        height: 600px;
+    }
+}
+
 #header {
+    position: relative;
 }

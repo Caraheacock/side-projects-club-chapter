@@ -2,16 +2,18 @@
 $footer = get_option('puzzle_footer');
 $social = get_theme_mod('social_media');
 
-foreach($social as $soc => $data) {
-    if (empty($data['link'])) unset($social[$soc]);
+if (!empty($social)) {
+    foreach($social as $soc => $data) {
+        if (empty($data['link'])) unset($social[$soc]);
+    }
 }
 ?>
     <footer id="footer" class="blue-background">
         <div class="row">
             <div class="column xs-span12">
                 <div class="column-inner">
-                    <a class="small-logo-container" href="<?php echo get_site_url(); ?>">
-                        <?php include('assets/images/logo.svg'); ?>
+                    <a class="vector-container small-logo-container" href="<?php echo get_site_url(); ?>">
+                        <?php include('assets/images/logo-icon.svg'); ?>
                     </a>
                     <?php
                     if (has_nav_menu('footer')) {

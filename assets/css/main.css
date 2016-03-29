@@ -1559,6 +1559,27 @@ a img {
       background-color: #f2af56;
       color: #fff; }
 
+/*---------*/
+/* Vectors */
+/*---------*/
+.vector-container {
+  position: relative;
+  overflow: hidden;
+  height: 0; }
+  .vector-container svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%; }
+
+.small-logo-container {
+  display: block;
+  width: 36px;
+  padding-bottom: 50px; }
+  .small-logo-container:hover {
+    opacity: 0.75; }
+
 /*----------*/
 /* 404 Page */
 /*----------*/
@@ -1681,5 +1702,40 @@ a img {
 /*--------*/
 /* Header */
 /*--------*/
+.home #header {
+  height: 225px;
+  background-color: #eee; }
+  .home #header .header-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%; }
+    .home #header .header-content .header-content-inner {
+      -webkit-flex: 0 1 33%;
+      -ms-flex: 0 1 33%;
+      flex: 0 1 33%;
+      width: 33%;
+      max-width: 250px; }
+  @media all and (min-width: 480px) {
+    .home #header {
+      height: 300px; } }
+  @media all and (min-width: 660px) {
+    .home #header {
+      height: 400px; } }
+  @media all and (min-width: 850px) {
+    .home #header {
+      height: 600px; } }
+
+#header {
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */
