@@ -1,0 +1,17 @@
+/*----------------*/
+/* Navigation Bar */
+/*----------------*/
+
+#nav {
+    &.home-nav {
+        background-color: rgba($blue, 0.5);
+        
+        .nav-logo {
+            display: block;
+            
+            .vector-container {
+                display: none;
+            }
+        }
+    }
+}

@@ -8,15 +8,9 @@ if (!empty($page_sections)) :
         $puzzle_options_data = $page_section['options'];
         $puzzle_columns_data = (!empty($page_section['columns']) ? $page_section['columns'] : false);
         $puzzle_section_type = $page_section['type'];
-        
-        $section_id = 'section-' . ($s + 1);
-        if (!empty($puzzle_options_data['id'])) {
-            $section_id = to_slug($puzzle_options_data['id']);
-        } else if (!empty($puzzle_options_data['headline'])) {
-            $section_id = to_slug($puzzle_options_data['headline']);
-        }
+        $main_content = (!empty($puzzle_options_data['main_content']) ? $puzzle_options_data['main_content'] : false);
         ?>
-        <section id="<?php echo $section_id; ?>" class="<?php echo section_classes($page_section); ?>">
+        <section id="<?php echo section_id($s, $page_section); ?>" class="<?php echo section_classes($page_section); ?>">
             <?php if (!empty($puzzle_options_data['headline'])) : ?>
             <div class="row puzzle-section-headline">
                 <div class="column xs-span12">
@@ -26,18 +20,23 @@ if (!empty($page_sections)) :
                 </div>
             </div>
             <?php endif; ?>
+
+            <?php if (!empty($main_content)) : ?>
+            <div class="row puzzle-main-content">
+                <div class="column xs-span12 md-span9 md-center">
+                    <div class="column-inner">
+                        <?php echo apply_filters('the_content', $main_content); ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+            
             <div class="row<?php echo ($puzzle_section_type == 'accordions' ? ' puzzle-accordions-content' : ''); ?>">
                 <?php
-                $loop_file_name = $puzzle_section_type;
-                
-                if ($puzzle_section_type == 'one-column' || $puzzle_section_type == 'two-column') {
-                    $loop_file_name = 'columns';
-                }
-                
-                $loop_file_location = 'theme/loops/' . $loop_file_name . '.php';
+                $loop_file = 'theme/loops/' . $puzzle_section_type . '.php';
         
                 foreach($puzzle_columns_data as $puzzle_column) {
-                    include(locate_template($loop_file_location));
+                    include(locate_template($loop_file));
                 }
                 ?>
             </div>

@@ -7,10 +7,6 @@ $two_column->set_group_name('Two Column')
     ->set_admin_column_classes('xs-span12 sm-span6')
     ->set_order(20)
     ->set_markup_attr(array(
-        'classes'           => array(
-            'name'          => 'Classes',
-            'input_type'    => 'text'
-        ),
         'align_text'        => array(
             'name'          => 'Align Text',
             'input_type'    => 'select',
@@ -20,10 +16,6 @@ $two_column->set_group_name('Two Column')
                 'Right'     => 'right'
             )
         ),
-        'skip_filter'       => array(
-            'name'          => 'Do not apply WordPress content filter',
-            'input_type'    => 'checkbox'
-        ),
         'content'           => array(
             'name'          => 'Content',
             'input_type'    => 'textarea',
@@ -32,14 +24,40 @@ $two_column->set_group_name('Two Column')
         )
     ))
     ->set_options(array(
+        'headline'          => array(
+            'name'          => 'Headline',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'text',
+            'save_as'       => 'h2'
+        ),
         'id'                => array(
             'name'          => 'Section ID',
             'width'         => 'xs-span12 sm-span6',
+            'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the Section ID will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the Section ID and headline are blank, the Section ID will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
             'input_type'    => 'text'
+        ),
+        'column_widths'     => array(
+            'name'          => 'Column Widths',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                '1/2 1/2'   => '1-2_1-2',
+                '1/3 2/3'   => '1-3_2-3',
+                '2/3 1/3'   => '2-3_1-3'
+            )
+        ),
+        'align_items' => array(
+            'name'          => 'Vertically Align Columns',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                'Top'       => 'top',
+                'Center'    => 'center'
+            )
         ),
         'background_color'        => array(
             'name'          => 'Background Color',
-            'width'         => 'xs-span12 sm-span6',
+            'width'         => 'xs-span12 sm-span4',
             'input_type'    => 'select',
             'options'       => array(
                 'White'             => 'white-background',
@@ -50,7 +68,7 @@ $two_column->set_group_name('Two Column')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span6',
+            'width'         => 'xs span12 sm-span4',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -61,7 +79,7 @@ $two_column->set_group_name('Two Column')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span6',
+            'width'         => 'xs span12 sm-span4',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -69,24 +87,6 @@ $two_column->set_group_name('Two Column')
                 'None'      => 'no'
             ),
             'selected'      => 'normal'
-        ),
-        'paragraph_spacing' => array(
-            'name'          => 'Paragraph Spacing',
-            'width'         => 'xs-span12 sm-span6',
-            'input_type'    => 'select',
-            'options'       => array(
-                'Loose'     => 'loose',
-                'Tight'     => 'tight'
-            )
-        ),
-        'align_items' => array(
-            'name'          => 'Vertically Align Columns',
-            'width'         => 'xs-span12 sm-span6',
-            'input_type'    => 'select',
-            'options'       => array(
-                'Center'    => 'center',
-                'Top'       => 'top'
-            )
         )
     ));
 

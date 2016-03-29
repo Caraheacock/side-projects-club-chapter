@@ -1,0 +1,19 @@
+/*--------*/
+/* Global */
+/*--------*/
+
+.home main {
+    > section {
+        &:first-child {
+            padding-top: $space-unit;
+        }
+        
+        &.no-padding-top:first-child {
+            padding-top: 0;
+        }
+        
+        &.large-padding-top:first-child {
+            padding-top: $space-unit * 2;
+        }
+    }
+}
