@@ -3,28 +3,72 @@
 /*--------*/
 
 .home #header {
-    height: 225px;
-    background-color: $light-gray;
+    height: 400px;
+    padding-bottom: $nav-height;
     
     .header-content {
         @include display-flex;
         @include align-items(center);
         @include justify-content(center);
         height: 100%;
+        padding: 0 1.5rem;
+        text-align: center;
         
         .header-content-inner {
-            @include flex(0 1 33%);
-            width: 33%;
-            max-width: 250px;
+            @include flex(0 1 100%);
+        }
+    }
+    
+    .header-content-logo {
+        width: 45%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    h3 {
+        margin-top: 0.5rem;
+    }
+    
+    &.full-color-logo-scheme {
+        .header-content {
+            h3 {
+                color: $blue;
+            }
+        }
+    }
+    
+    &.white-logo-scheme {
+        .header-content {
+            circle, path {
+                fill: #fff;
+            }
+
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+    
+    &.has-background-image {
+        .header-content {
+            svg {
+                @include filter(drop-shadow(0 0 10px rgba(#000, 0.75)));
+            }
+        
+            h3 {
+                text-shadow: 0 0 10px rgba(#000, 0.75);
+            }
         }
     }
     
     @include breakpoint($size-sm) {
-        height: 300px;
+        .header-content-logo {
+            width: 33%;
+        }
     }
     
     @include breakpoint($size-md) {
-        height: 400px;
+        height: 500px;
     }
     
     @include breakpoint($size-lg) {
@@ -34,4 +78,7 @@
 
 #header {
     position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

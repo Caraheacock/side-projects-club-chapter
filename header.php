@@ -1,7 +1,3 @@
-<?php
-$nav = get_option('puzzle_nav');
-$nav_logo = (!empty($nav['logo']) ? stripslashes_deep($nav['logo']) : false);
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -11,11 +7,36 @@ $nav_logo = (!empty($nav['logo']) ? stripslashes_deep($nav['logo']) : false);
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('smooth-scroll-enabled'); ?>>
-    <header id="header">
+    <?php
+    $header_styles = '';
+    
+    if (is_front_page()) {
+        $chapter_name = get_theme_mod('chapter_name');
+        $header_background_color = get_theme_mod('header_background_color');
+        $header_logo_scheme = get_theme_mod('header_logo_scheme');
+        $header_background_image = get_theme_mod('header_background_image');
+        
+        $header_styles = ' class="';
+        $header_styles .= (!empty($header_background_color) ? $header_background_color : 'gray') . '-background';
+        $header_styles .= (!empty($header_logo_scheme) ? ' ' . $header_logo_scheme . '-logo-scheme' : '');
+        $header_styles .= (!empty($header_background_image) ? ' has-background-image' : '');
+        $header_styles .= '"';
+        
+        if (!empty($header_background_image)) {
+            $header_styles .= ' style="background-image: url(' . wp_get_attachment_url($header_background_image, 'full') . ');"';
+        }
+    }
+    ?>
+    <header id="header"<?php echo $header_styles; ?>>
         <?php if (is_front_page()) : ?>
         <div class="header-content">
             <div class="header-content-inner">
-                <?php insert_svg(get_stylesheet_directory() . '/assets/images/logo.svg'); ?>
+                <div class="header-content-logo">
+                    <?php insert_svg(get_stylesheet_directory() . '/assets/images/logo.svg'); ?>
+                </div>
+                <?php if (!empty($chapter_name)) : ?>
+                <h3><?php echo $chapter_name; ?> Chapter</h3>
+                <?php endif; ?>
             </div>
         </div>
         <?php endif; ?>
