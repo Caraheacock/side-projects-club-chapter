@@ -7,11 +7,12 @@ These instructions assume that you are already familiar with how to use the Word
 ### Installation and Setup
 
 1. Clone the contents of this repository.
-2. Upload this repository as a folder in your themes folder. You do NOT need to upload:
+2. Make sure to also pull the 'puzzle_pieces' submodule contents once you've cloned this repo.
+3. Upload this repository as a folder in your themes folder. You do NOT need to upload:
   - the `assets/scss` folder
   - the `.git` hidden file
   - the `.gitignore` hidden file
-3. Within the WordPress admin interface, go to Appearance > Themes and activate the "Side Projects Club Chapter" theme.
+4. Within the WordPress admin interface, go to Appearance > Themes and activate the "Side Projects Club Chapter" theme.
 
 ---
 
@@ -25,7 +26,7 @@ The page builder template will allow you to add and arrange different types of s
 - Two Column
 - Accordions
 
-You can set the headline, background color, the amount of space on the top and bottom, etc. for sections. You can also reorder sections by dragging and dropping.
+You can set the headline, background color, the amount of space on the top and bottom, etc. for sections. You can also reorder sections by dragging and dropping, collapse them by clicking the chevron in the upper left of a section, or delete them by clicking the X in the upper right.
 
 For two column sections, there are additional options for setting the widths of the columns: either half and half, one third and two thirds, or two thirds and one third.
 
