@@ -45,5 +45,4 @@ if (!empty($page_sections)) :
         $s++;
     endforeach;
 endif;
-
 ?>
