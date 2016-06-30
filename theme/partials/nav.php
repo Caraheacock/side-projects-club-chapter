@@ -2,7 +2,7 @@
     <div class="row">
         <div class="column xs-span8 sm-span6 md-span4 lg-span3 nav-logo">
             <a class="vector-container small-logo-container" href="<?php echo get_site_url(); ?>">
-                <?php include('assets/images/logo-icon.svg'); ?>
+                <?php include(TEMPLATEPATH . '/assets/images/logo-icon.svg'); ?>
             </a>
         </div>
         <div class="column xs-span4 sm-span6 md-span8 lg-span9">
