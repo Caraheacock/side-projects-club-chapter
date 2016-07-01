@@ -34,10 +34,7 @@ if (!empty($page_sections)) :
             <div class="row<?php echo ($puzzle_section_type == 'accordions' ? ' puzzle-accordions-content' : ''); ?>">
                 <?php
                 $loop_file = 'theme/loops/' . $puzzle_section_type . '.php';
-        
-                foreach($puzzle_columns_data as $puzzle_column) {
-                    include(locate_template($loop_file));
-                }
+                foreach($puzzle_columns_data as $puzzle_column) include(locate_template($loop_file));
                 ?>
             </div>
         </section>
