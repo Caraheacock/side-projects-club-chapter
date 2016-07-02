@@ -12,13 +12,14 @@ These instructions assume that you are already familiar with how to use the Word
   - the `assets/scss` folder
   - the `.git` hidden file
   - the `.gitignore` hidden file
+  - this `readme.md`
 4. Within the WordPress admin interface, go to Appearance > Themes and activate the "Side Projects Club Chapter" theme.
 
 ---
 
 ### Creating Pages
 
-You can create simple pages, or if you would like to break your page into sections sections, select "Page Builder" from the templates dropdown.
+You can create simple pages, or if you would like to break your page into sections, select "Page Builder" from the templates dropdown.
 
 The page builder template will allow you to add and arrange different types of sections. The sections currently available are:
 
@@ -46,7 +47,7 @@ The Social Media settings allow you to set URLs for Facebook, Meetup, Twitter, T
 
 #### Menus
 
-In Appearance > Menus, you can build menus. In the "Menu Settings" section, check "Primary Menu" to load your menu in the main navigation bar, or "Footer Menu" to load your menu in the footer.
+In Appearance > Menus, you can build menus. In the "Menu Settings" section, once you have created a menu, check "Primary Menu" to load your menu in the main navigation bar, or "Footer Menu" to load your menu in the footer.
 
 ---
 
@@ -56,7 +57,7 @@ In Appearance > Menus, you can build menus. In the "Menu Settings" section, chec
   - For setting meta descriptions, creating site maps, etc.
 - [All-in-One Event Calendar](https://wordpress.org/plugins/all-in-one-event-calendar/)
   - For creating events for your chapter.
-  - The Side Projects Club Chapter theme also styles this plugin slightly, but you will need to set the colors through the plugin options to use Side Projects Club colors instead of the default colors.
+  - The Side Projects Club Chapter theme also overrides the colors for this plugin to keep it inline with the brand.
 - [Anti-spam](https://wordpress.org/plugins/anti-spam/)
   - For preventing spam in comments.
   - So far the Side Projects Club website has low enough traffic that spam has not become an issue yet, but it's probably best to prevent it early just in case.
