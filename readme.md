@@ -1,6 +1,6 @@
 # Side Projects Club Chapter Theme
 
-These instructions assume that you are already familiar with how to use the WordPress admin interface. If you need additional help or are unfamiliar with WordPress, ask Cara for help!
+These instructions assume that you are already familiar with basic GitHub cloning and how to use the WordPress admin interface. If you need additional help or are unfamiliar with WordPress, ask [Cara](https://github.com/caraheacock/) for help!
 
 ---
 
